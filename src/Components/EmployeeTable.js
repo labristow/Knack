@@ -55,10 +55,6 @@ function EmployeeTable() {
         }
         setEmployee(employee.sort(compareName));
     }
-    
-    useEffect(() => {
-        alert(employee)
-    }, [employee]);
 
     return (
         <div className="w-full relative table px-6 bg-blue-100">
