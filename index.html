@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Knack Coaching Platform : Employee Page</title>
+    <link rel="icon" type="image/icon" href="./favicon.png">
+    <style>
+        :root {
+            --primary-bg: #1f40e6;
+            --primary-color: #1f40e6;
+            --light-bg-intro: #e2e2e2;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .body-intro {
+            background-color: rgba(255, 255, 255, 0);
+            background-image: radial-gradient(circle at right top, #f2f7fc 48%, #ffffff 25%);
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-width: 0px 0px 0px 0px;
+            border-color: #e2e2e2;
+            border-style: solid;
+            width: 1025px;
+            height: 1025px;
+            position: absolute;
+            top: 0%;
+            right: 0%;
+        }
+
+        .body-intro img {
+            position: absolute;
+            width: 62%;
+            top: 15%;
+            right: 0%;
+        }
+
+        nav {
+            padding: 12px 24px;
+        }
+    </style>
+</head>
+
+<body>
+    
+</body>
+<script>
+    let employee = [
+        { name: "Adebayo Blessing", staff_id: "KN124", department: "Engineering" },
+        { name: "Ladejobi Blessing", staff_id: "KN024", department: "Finance" },
+        { name: "Blessing Adebayo", staff_id: "KN194", department: "Management" }
+    ]
+
+    function compareName(a, b) {
+        if (a.name < b.name) {
+            return -1;
+        }
+        if (a.name > b.name) {
+            return 1;
+        }
+        return 0;
+    }
+
+    function compareStaffID(a, b) {
+        if (a.staff_id < b.staff_id) {
+            return -1;
+        }
+        if (a.staff_id > b.staff_id) {
+            return 1;
+        }
+        return 0;
+    }
+
+    function compareStaffID(a, b) {
+        if (a.staff_id < b.staff_id) {
+            return -1;
+        }
+        if (a.staff_id > b.staff_id) {
+            return 1;
+        }
+        return 0;
+    }
+
+    function compareDepartment(a, b) {
+        if (a.department < b.department) {
+            return -1;
+        }
+        if (a.department > b.department) {
+            return 1;
+        }
+        return 0;
+    }
+
+
+    sortedEmployee1 = employee.sort(compareName);
+    sortedEmployee2 = employee.sort(compareStaffID);
+    sortedEmployee3 = employee.sort(compareDepartment);
+    console.log(sortedEmployee1)
+    console.log(sortedEmployee2)
+    console.log(sortedEmployee3)
+</script>
+
+</html>

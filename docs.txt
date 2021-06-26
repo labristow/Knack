@@ -1,0 +1,22 @@
+Hello,
+
+Thank you for joining us for the first round of interviews, we had a good time chatting with you. The next step would be to complete the following assignment:
+
+Using React, create a responsive web-app (front-end) for an Employee where they can:
+Find a directory of all employees in their company
+Sort the directory based on a list of attributes (anything you want like Department, Position, Location, etc)
+Schedule meetings with other employees based on their availability
+Use survey builder to build their own custom surveys and share with other employees to fill out
+
+Judging criteria will be based on:
+Completing the features
+Mobile responsiveness
+Clean code
+Modern UI: How appealing and easy on the eye is the app
+Great UX: How long / How easy it takes to understand and navigate the app 
+
+Brownie points if you set up the back-end too on Node.js and consume an API that lists the employee data.
+
+Kindly submit the assignment via a github link (or similar) + live link of the web app.
+
+The last day to complete the assignment is Sunday 27th of June.
