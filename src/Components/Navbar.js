@@ -13,7 +13,7 @@ function Navbar() {
             <a href="/#">
                 <img src={Logo} width="200" alt="" />
             </a>
-            <h5 className="bar" onClick={showNavDropdown}>
+            <h5 className="bar lg:hidden md:hidden" onClick={showNavDropdown}>
                 <span className="bar1 block w-6 ml-1 h-1 bg-gray-600"
                 ></span>
                 <span className="bar2 block w-8 h-1 my-1 bg-gray-600"
@@ -26,9 +26,9 @@ function Navbar() {
                 <a href="/#" className="font-medium w-full block px-8 text-white border border-gray-100 py-3">Pricing</a>
                 <a href="/#" className="font-medium w-full block px-8 text-white border border-gray-100 py-3">About Us</a>
                 <a href="/#" className="font-medium w-full block px-8 text-white border border-gray-100 py-3">Contact Us</a>
-                <a href="/#" className="w-full px-5 py-3 text-white text-sm font-semibold bg-blue-600 rounded block px-8 text-white border border-gray-100 py-3">LOGIN</a>
+                <a href="/#" className="w-full px-5 text-white text-sm font-semibold bg-blue-600 rounded block px-8 text-white border border-gray-100 py-3">LOGIN</a>
             </div>
-            <div className="lg:flex hidden">
+            <div className="lg:flex md:flex items-center hidden">
                 <a href="/#" className="w-auto px-6 py-3 border border-blue-600 rounded mx-4">Solutions</a>
                 <a href="/#" className="font-medium w-auto mx-4">Pricing</a>
                 <a href="/#" className="font-medium w-auto mx-4">About Us</a>

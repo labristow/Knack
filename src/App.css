@@ -8,7 +8,7 @@ body {
     font-family: "DM Sans";
 }
 .body{
-    height: calc(100vh - 75.42px);
+    height: calc(100vh - 75.42px - 10px);
     overflow: hidden;
 }
 .body-intro {
@@ -34,12 +34,16 @@ nav {
     height: calc(100vh - 75.42px);
     overflow-y: hidden;
 }
-.table{
+.table-container{
     height: calc(100vh - 35px - 95px - 75.42px);
     background-color: #f3f9fa;
     padding-bottom: 20px;
     display: flex;
     overflow-y: scroll;
+}
+.sort-active{
+    border-bottom: 2px solid var(--primary-bg);
+    color: var(--primary-color);
 }
 .bar1,
 .bar2,
@@ -91,7 +95,7 @@ nav {
 }
 
 @media screen and (max-width: 400px){
-    .table{
+    .table-container{
         height: calc(100vh - 35px - 76px - 112px - 76px - 75.42px);
         background-color: #f3f9fa;
         padding-bottom: 20px;
