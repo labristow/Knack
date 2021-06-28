@@ -13,7 +13,7 @@ function Body() {
 
     useEffect(() => {
         axios.get("http://knack-pro.herokuapp.com/employee/getRecords").then(response => {
-            setEmployee(response.employeeData.data);
+            setEmployee(response.data);
         })
     }, []);
 
@@ -31,7 +31,7 @@ function Body() {
             setSortBy(!sortBy);
             setSorting({one: "ID", two: "Name", three: "Email"});
             setArrangement({one: "id", two: "name", three: "email"});
-            setEmployee(response.employeeData.data.sort(compareName));
+            setEmployee(response.data.sort(compareName));
         })
     }
 
@@ -49,7 +49,7 @@ function Body() {
             setSortBy(!sortBy);
             setSorting({one: "Name", two: "Email", three: "ID"});
             setArrangement({one: "name", two: "email", three: "id"});
-            setEmployee(response.employeeData.data.sort(compareName));
+            setEmployee(response.data.sort(compareName));
         });
     }
 
@@ -67,7 +67,7 @@ function Body() {
             setSortBy(!sortBy);
             setSorting({one: "Email", two: "ID", three: "Name"});
             setArrangement({one: "email", two: "id", three: "name"});
-            setEmployee(response.employeeData.data.sort(compareName));
+            setEmployee(response.data.sort(compareName));
         })
     }
 
