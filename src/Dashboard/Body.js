@@ -8,6 +8,9 @@ import axios from 'axios';
 function Body() {
     const [employee, setEmployee] = useState(null);
     const [sortBy, setSortBy] = useState(false);
+    const [sorting, setSorting] = useState({one: "ID", two: "Name", three: "Email"});
+    const [arrangement, setArrangement] = useState({one: "id", two: "name", three: "email"});
+
     useEffect(() => {
         axios.get("https://jsonplaceholder.typicode.com/users").then(response => {
             setEmployee(response.data);
@@ -26,6 +29,8 @@ function Body() {
         }
         axios.get("https://jsonplaceholder.typicode.com/users").then(response => {
             setSortBy(!sortBy);
+            setSorting({one: "ID", two: "Name", three: "Email"});
+            setArrangement({one: "id", two: "name", three: "email"});
             setEmployee(response.data.sort(compareName));
         })
     }
@@ -42,6 +47,8 @@ function Body() {
         }
         axios.get("https://jsonplaceholder.typicode.com/users").then(response => {
             setSortBy(!sortBy);
+            setSorting({one: "Name", two: "Email", three: "ID"});
+            setArrangement({one: "name", two: "email", three: "id"});
             setEmployee(response.data.sort(compareName));
         });
     }
@@ -58,6 +65,8 @@ function Body() {
         }
         axios.get("https://jsonplaceholder.typicode.com/users").then(response => {
             setSortBy(!sortBy);
+            setSorting({one: "Email", two: "ID", three: "Name"});
+            setArrangement({one: "email", two: "id", three: "name"});
             setEmployee(response.data.sort(compareName));
         })
     }
@@ -127,7 +136,7 @@ function Body() {
                 </div>
 
 
-                <EmployeeTable employee={employee} />
+                <EmployeeTable employee={employee} sorting={sorting} arrangement={arrangement}/>
             </div>
         </div>
     )
