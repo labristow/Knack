@@ -12,7 +12,7 @@ function Body() {
     const [arrangement, setArrangement] = useState({one: "id", two: "name", three: "email"});
 
     useEffect(() => {
-        axios.get("http://knack-pro.herokuapp.com/employee/getRecords").then(response => {
+        axios.get("https://knack-pro.herokuapp.com/employee/getRecords").then(response => {
             setEmployee(response.data.data);
         })
     }, []);
@@ -27,7 +27,7 @@ function Body() {
             }
             return 0;
         }
-        axios.get("http://knack-pro.herokuapp.com/employee/getRecords").then(response => {
+        axios.get("https://knack-pro.herokuapp.com/employee/getRecords").then(response => {
             setSortBy(!sortBy);
             setSorting({one: "ID", two: "Name", three: "Email"});
             setArrangement({one: "id", two: "name", three: "email"});
@@ -45,7 +45,7 @@ function Body() {
             }
             return 0;
         }
-        axios.get("http://knack-pro.herokuapp.com/employee/getRecords").then(response => {
+        axios.get("https://knack-pro.herokuapp.com/employee/getRecords").then(response => {
             setSortBy(!sortBy);
             setSorting({one: "Name", two: "Email", three: "ID"});
             setArrangement({one: "name", two: "email", three: "id"});
@@ -63,7 +63,7 @@ function Body() {
             }
             return 0;
         }
-        axios.get("http://knack-pro.herokuapp.com/employee/getRecords").then(response => {
+        axios.get("https://knack-pro.herokuapp.com/employee/getRecords").then(response => {
             setSortBy(!sortBy);
             setSorting({one: "Email", two: "ID", three: "Name"});
             setArrangement({one: "email", two: "id", three: "name"});
